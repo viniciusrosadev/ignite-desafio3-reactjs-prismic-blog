@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import Link from 'next/link'
 import Prismic from '@prismicio/client'
-import { FiCalendar, FiUser  } from 'react-icons/fi'
+import { FiCalendar, FiUser } from 'react-icons/fi'
 
 import { getPrismicClient } from '../services/prismic';
 
@@ -40,11 +40,14 @@ export default function Home({ postsPagination }: HomeProps) {
               <a key={post.uid}>
                 <strong>{post.data.title}</strong>
                 <p>{post.data.subtitle}</p>
-                <time><FiCalendar/> {post.first_publication_date}</time>
+                <time><FiCalendar /> {post.first_publication_date}</time>
                 <span><FiUser /> {post.data.author}</span>
               </a>
             </Link>
           ))}
+          {postsPagination.next_page !== null && (
+            <button>Carregar mais posts</button>
+          )}
         </div>
       </main>
     </main>
@@ -55,23 +58,21 @@ export const getStaticProps = async () => {
   const prismic = getPrismicClient();
   const postsResponse = await prismic.query([Prismic.predicates.at('document.type', 'prismicdesafio')], {
     fetch: ['prismicdesafio.title', 'prismicdesafio.subtitle', 'prismicdesafio.author'],
-    pageSize: 1
+    pageSize: 5
   });
 
   const resultsMap = postsResponse.results.map((post): Post => {
     return {
       uid: post.uid,
-      first_publication_date:
-        format(new Date(post.first_publication_date), "dd MMM Y", {
-          locale: ptBR
-        }),
+      first_publication_date: post.first_publication_date,
       data: {
         title: post.data.title,
         subtitle: post.data.subtitle,
         author: post.data.author
       }
     }
-  })
+  }
+  )
 
   const postsPagination: PostPagination = {
     next_page: postsResponse.next_page,
