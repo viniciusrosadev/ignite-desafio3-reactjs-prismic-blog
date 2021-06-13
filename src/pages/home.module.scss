@@ -1,1 +1,48 @@
 // TODO
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.posts {
+    display: flex;
+
+    a {
+        display: block;
+
+    strong {
+        display: block;
+        font-weight: 700;
+        line-height: 2.11rem;
+        font-size: 1.65rem;
+        color: var(--heading);
+    }
+
+    p {
+        line-height: 1.36rem;
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+        color: var(--body);
+    }
+
+    time {
+        display: flex;
+        align-items: center;
+        svg {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+    }
+
+    span {
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+    }
+    }
+}
