@@ -1,1 +1,82 @@
-// TODO
+img.banner {
+  margin: 2rem auto 0;
+  width: 100%;
+}
+
+.informationAddressBox {
+  display: flex;
+  flex-direction: column;
+
+  strong {
+    display: block;
+    font-weight: 700;
+    line-height: 2.11rem;
+    font-size: 1.65rem;
+    color: var(--heading);
+    margin-bottom: 1.5rem;
+    font-style: normal;
+  }
+
+  p {
+    font-size: 1.12rem;
+    line-height: 1.36rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--body);
+  }
+
+  time {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 0.9rem;
+    color: var(--info);
+
+    &:last-of-type {
+      margin-left: 1.5rem;
+    }
+
+    svg {
+      margin-right: 0.8rem;
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--info);
+
+    svg {
+      margin-left: 1rem;
+      margin-right: 0.8rem;
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+}
+
+.postTotal {
+  article {
+    margin: 3rem auto 5rem;
+
+    strong {
+      font-size: 2.5rem;
+      line-height: 1.5rem;
+    }
+
+    p {
+      color: var(--info);
+      margin-top: 1.5rem;
+      text-align: justify;
+    }
+
+    ul {
+      color: var(--info);
+      margin-top: 1.5rem;
+      text-align: justify;
+    }
+  }
+}

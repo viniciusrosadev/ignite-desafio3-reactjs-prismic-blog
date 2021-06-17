@@ -1,73 +1,67 @@
-// TODO
-.container {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
 .posts {
     display: flex;
     flex-direction: column;
-
+  
     a {
-        display: block;
-        margin-bottom: 3rem;
-
-    strong {
+      display: block;
+      margin-bottom: 3rem;
+  
+      strong {
         display: block;
         font-weight: 700;
         line-height: 2.11rem;
         font-size: 1.65rem;
         color: var(--heading);
-    }
-
-    p {
+      }
+  
+      p {
         font-size: 1.12rem;
         line-height: 1.36rem;
         margin-top: 0.5rem;
         margin-bottom: 1.5rem;
         color: var(--body);
-    }
-
-    time {
+      }
+  
+      time {
         display: inline-flex;
         align-items: center;
         flex-direction: row;
         font-size: 0.9rem;
         color: var(--info);
-
+  
         svg {
-            margin-right: 0.4rem;
-            width: 1.25rem;
-            height: 1.25rem;
+          margin-right: 0.4rem;
+          width: 1.25rem;
+          height: 1.25rem;
         }
-    }
-
-    span {
+      }
+  
+      span {
         display: inline-flex;
         align-items: center;
         font-size: 0.9rem;
         color: var(--info);
-
+  
         svg {
-            margin: 0 0.4rem; 
-            width: 1.25rem;
-            height: 1.25rem;
+          margin: 0 0.4rem;
+          width: 1.25rem;
+          height: 1.25rem;
         }
+      }
     }
-    }
-
+  
     button {
-        background:none;
-        border:none;
-        margin:0;
-        padding:0;
-        color: var(--highlight);
-        font-weight: 600;
-        font-size: 1.12rem;
-        line-height: 1.3rem;
-        width: 11rem;
-        height: 1.3rem;
+      background: none;
+      border: none;
+      margin: 0;
+      padding: 0;
+      color: var(--highlight);
+      font-weight: 600;
+      font-size: 1.12rem;
+      line-height: 1.3rem;
+      width: 11rem;
+      height: 1.3rem;
+      margin-bottom: 5rem;
     }
-}
-
+  }
+  
